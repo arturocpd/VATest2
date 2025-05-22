@@ -30,7 +30,7 @@ jobs:
       - name: Run SonarCloud Scan
         uses: codescan-io/codescan-scanner-action@1.6
         with: 
-          organization: '5acb36a4a33e56128a547379'
+          organization: '606634a062638e006f2da10a'
           projectKey: 'a15J7000000kESNIA2'
           login: ${{ secrets.SONAR_TOKEN }}
           failOnRedQualityGate: false
