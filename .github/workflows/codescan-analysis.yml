@@ -34,7 +34,7 @@ jobs:
         run: java -version
 
       - name: Run SonarCloud Scan
-        uses: codescan-io/codescan-scanner-action@1.6
+        uses: codescan-io/codescan-scanner-action@v1
         with: 
           organization: '606634a062638e006f2da10a'
           projectKey: 'a15J7000000kESNIA2'
