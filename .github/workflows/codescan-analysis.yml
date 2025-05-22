@@ -13,7 +13,7 @@ jobs:
           echo "Token Length: $(echo -n $SONAR_TOKEN | wc -c)"
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
+          
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Required for accurate branch analysis
@@ -24,17 +24,11 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Set JAVA_HOME to Java 17
-        run: echo "JAVA_HOME=$JAVA_HOME_17_X64" >> $GITHUB_ENV
-
-      - name: Print Java Home
-        run: echo $JAVA_HOME
-
       - name: Verify Java Version
         run: java -version
 
       - name: Run SonarCloud Scan
-        uses: codescan-io/codescan-scanner-action@v1.6
+        uses: codescan-io/codescan-scanner-action@1.6
         with: 
           organization: '606634a062638e006f2da10a'
           projectKey: 'a15J7000000kESNIA2'
@@ -43,7 +37,7 @@ jobs:
           scanChangedFilesOnly: false
           generateSarifFile: false
           generateReportFile: false
-          args: |
+          args: 
             sonar.verbose=true
             sonar.scm.provider=git
             sonar.scm.disabled=false
