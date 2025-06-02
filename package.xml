@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>InsecureApexClass</members>
-        <name>ApexClass</name>
+        <members>kompalJune2025__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>kompalJune2025__c-kompalJune2025 Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>kompalJune2025__c</members>
+        <name>SharingRules</name>
     </types>
     <version>63.0</version>
 </Package>
